@@ -1,6 +1,7 @@
 import React, { Component} from "react";
 import { Link } from 'react-router-dom'
 import { Redirect } from "react-router-dom";
+import {Button, Card, Container, Row, Col } from 'react-bootstrap'
 
 
 
@@ -40,7 +41,7 @@ class Login extends Component {
         const data1 = this.state;
         if(data1.username==localStorage.getItem('currentUser')){
             this.setState({ redirect: "/" });
-            
+
         }
         else{
             alert("Usuario y contraseña incorrectos.")
@@ -86,9 +87,9 @@ class Login extends Component {
                 <p className="forgot-password text-right">
                     ¿Te olvidaste de tu <Link to="/forgot-password"> contraseña? </Link>
                 </p>
-                <button>
+                <Button variant="outline-primary">
                     <Link className="nav-link" to="/signup">¿Quieres registrarte?</Link>
-                </button>
+                </Button>
             </form>
         </div>
         </div>

@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import {Button, Card, Carousel, Container, Row, Col, Image} from 'react-bootstrap'
 import construClase from '../assets/construClase.jpg'
-import inConstru from '../assets/inConstru.jpeg'
+import inConstru from '../assets/inConstru.jpg'
 import house from '../assets/house.jpg'
 
 

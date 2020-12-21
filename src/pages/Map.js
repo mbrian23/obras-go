@@ -1,8 +1,6 @@
-import React, { Component, Fragment } from 'react';
-import axios from 'axios';
+import React, { Component } from 'react';
 import MapReact from "../components/map"
 
-import inConstru from '../assets/inConstru.jpeg'
 
 
 
