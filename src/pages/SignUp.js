@@ -20,6 +20,8 @@ export default class SingUp extends Component {
     handleSubmit(event) {
         const data1 = this.state;
         localStorage.setItem('currentUser', data1.username);
+        console.log(localStorage.getItem('currentUser'))
+        alert("Usuario "+ localStorage.getItem('currenUser')+ " creado correctamente, por favor ingrese.")
     }
     
       handleChange(event) {

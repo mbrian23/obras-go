@@ -40,6 +40,7 @@ class Login extends Component {
         const data1 = this.state;
         if(data1.username==localStorage.getItem('currentUser')){
             this.setState({ redirect: "/" });
+            
         }
         else{
             alert("Usuario y contraseña incorrectos.")
