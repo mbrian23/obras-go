@@ -41,8 +41,14 @@ class Login extends Component {
         if(data1.username==localStorage.getItem('currentUser')){
             this.setState({ redirect: "/" });
         }
-    
-        
+        else{
+            alert("Usuario y contraseña incorrectos.")
+        }
+    }
+
+    componentDidMount(){
+        localStorage.clear()
+        console.log("Local storage cleared")
     }
 
   

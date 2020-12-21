@@ -40,11 +40,12 @@ class ContactForm extends Component {
   }
   handleSubmit = (e) => {
     e.preventDefault();
+    
 
     if (formValid(this.state)) {
       // Handle form validation success
       const { name, email, obra, message } = this.state;
-
+      
       // Set template params
       let templateParams = {
         from_name: name,
@@ -53,6 +54,8 @@ class ContactForm extends Component {
         message: message,
       };
       emailjs.send('obras_go', 'template_ybb27k4', templateParams, 'user_8NyT0ScTlk9QiVqBZAdIp');
+      
+      alert("Email enviado correctamente, le responderemos a la brevedad en el email ingresado.")
 
       console.log(`
         --SUBMITTING--
@@ -92,6 +95,7 @@ class ContactForm extends Component {
       case 'message':
         formErrors.message = value.length < 1 ? 'Please enter a message' : '';
         break;
+
       default:
         break;
     }
@@ -127,7 +131,7 @@ class ContactForm extends Component {
                 value={this.state.email}
                 className={`form-control formInput ${formErrors.email.length > 0 ? 'error' : null}`}
                 onChange={this.handleChange}
-                placeholder='Email'
+                placeholder='Email de contacto'
                 noValidate
               ></input>
               {formErrors.email.length > 0 && (
@@ -147,7 +151,7 @@ class ContactForm extends Component {
                   formErrors.message.length > 0 ? 'error' : null
                 }`}
                 onChange={this.handleChange}
-                placeholder='¿Por qué quieres visitar esta obra?'
+                placeholder='¿Por qué quieres visitar esta obra? \n Escriba fecha y hora tentativa.'
                 noValidate
               ></textarea>
               {formErrors.message.length > 0 && (
